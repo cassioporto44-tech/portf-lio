@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cássio Porto | Portfólio</title>
+<title>Cássio Porto | Desenvolvedor</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -19,9 +20,29 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
+background:#020617;
 color:white;
-transition:0.3s;
+overflow-x:hidden;
+transition:0.4s;
+}
+
+/* fundo animado */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#0ea5e9 1px,transparent 1px);
+background-size:40px 40px;
+animation:mover 40s linear infinite;
+opacity:0.15;
+z-index:-1;
+}
+
+@keyframes mover{
+from{transform:translate(0,0)}
+to{transform:translate(-200px,-200px)}
 }
 
 /* modo claro */
@@ -54,35 +75,47 @@ color:white;
 text-decoration:none;
 }
 
+.theme{
+cursor:pointer;
+background:#38bdf8;
+padding:8px 12px;
+border-radius:6px;
+}
+
 /* hero */
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 }
 
+/* foto neon */
+
 .hero img{
-width:150px;
+width:160px;
 border-radius:50%;
 border:4px solid #38bdf8;
+box-shadow:0 0 20px #38bdf8;
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:38px;
+font-size:40px;
 }
 
 .hero span{
 color:#38bdf8;
 }
 
-.hero p{
+.typing{
+font-size:20px;
+margin-top:10px;
 color:#94a3b8;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
+margin-top:25px;
 padding:12px 20px;
 background:#38bdf8;
 color:black;
@@ -106,7 +139,7 @@ border-left:4px solid #38bdf8;
 padding-left:10px;
 }
 
-/* cards */
+/* grid */
 
 .grid{
 display:grid;
@@ -115,14 +148,14 @@ gap:20px;
 }
 
 .card{
-background:#1e293b;
+background:#0f172a;
 padding:20px;
 border-radius:10px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 /* habilidades */
@@ -132,7 +165,7 @@ margin-bottom:15px;
 }
 
 .bar{
-background:#1e293b;
+background:#0f172a;
 height:10px;
 border-radius:10px;
 overflow:hidden;
@@ -142,14 +175,11 @@ overflow:hidden;
 display:block;
 height:10px;
 background:#38bdf8;
+animation:load 2s;
 }
 
-/* projetos */
-
-.project{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
+@keyframes load{
+from{width:0}
 }
 
 /* contato */
@@ -165,7 +195,7 @@ border-radius:8px;
 text-align:center;
 }
 
-/* whatsapp flutuante */
+/* whatsapp */
 
 .whatsapp{
 position:fixed;
@@ -179,14 +209,7 @@ border-radius:50%;
 text-decoration:none;
 }
 
-/* botão tema */
-
-.theme{
-cursor:pointer;
-background:#38bdf8;
-padding:8px 12px;
-border-radius:6px;
-}
+/* footer */
 
 footer{
 text-align:center;
@@ -218,11 +241,11 @@ border-top:1px solid #334155;
 
 <section class="hero">
 
-<img src="https://i.imgur.com/2DhmtJ4.png">
+<img src="foto.jpg">
 
 <h1>Olá, eu sou <span>Cássio Porto</span></h1>
 
-<p>Profissional de Tecnologia e Desenvolvimento Web</p>
+<div class="typing" id="texto"></div>
 
 <a class="btn" href="#contato">Falar comigo</a>
 
@@ -233,8 +256,9 @@ border-top:1px solid #334155;
 <h2 class="section-title" id="sobre">Sobre Mim</h2>
 
 <p>
-Formado em Tecnologia de Redes de Computadores, atuo nas áreas de desenvolvimento web, programação e serviços técnicos.
-Tenho experiência em criação de sites, redes de computadores e instalação de equipamentos eletrônicos.
+Formado em <b>Tecnologia de Redes de Computadores</b>.
+Atuo com desenvolvimento web, programação e serviços técnicos.
+Crio sites profissionais e soluções digitais para empresas.
 </p>
 
 <br><br>
@@ -244,33 +268,33 @@ Tenho experiência em criação de sites, redes de computadores e instalação d
 <div class="grid">
 
 <div class="card">
-<h3>Programador</h3>
-<p>Desenvolvimento de sistemas e aplicações web.</p>
+<h3>Programação</h3>
+<p>Desenvolvimento de aplicações web.</p>
 </div>
 
 <div class="card">
-<h3>Desenvolvedor Web</h3>
-<p>Criação e desenvolvimento de sites profissionais.</p>
+<h3>Criação de Sites</h3>
+<p>Sites modernos e responsivos.</p>
 </div>
 
 <div class="card">
 <h3>Redes de Computadores</h3>
-<p>Infraestrutura e suporte técnico em redes.</p>
+<p>Infraestrutura e suporte técnico.</p>
 </div>
 
 <div class="card">
-<h3>Instalador de Câmeras</h3>
-<p>Instalação de sistemas de segurança.</p>
+<h3>Instalação de Câmeras</h3>
+<p>Sistemas de segurança.</p>
 </div>
 
 <div class="card">
 <h3>Instalação de TV</h3>
-<p>Instalação e configuração de equipamentos.</p>
+<p>Instalação e configuração.</p>
 </div>
 
 <div class="card">
 <h3>Gestor de Operações Esportivas</h3>
-<p>Organização e gestão esportiva.</p>
+<p>Gestão de atividades esportivas.</p>
 </div>
 
 </div>
@@ -301,15 +325,16 @@ Tenho experiência em criação de sites, redes de computadores e instalação d
 
 <div class="grid">
 
-<div class="project">
-<h3>Site de Lanchonete</h3>
-<p>Site profissional com cardápio digital e pedidos pelo WhatsApp.</p>
-<a class="btn" href="https://cassioporto44-tech.github.io/LanchoneteLocal/">Ver Projeto</a>
-</div>
+<div class="card">
 
-<div class="project">
-<h3>Portfólio Profissional</h3>
-<p>Site de apresentação profissional.</p>
+<h3>Site de Lanchonete</h3>
+
+<p>Cardápio digital com pedidos via WhatsApp.</p>
+
+<a class="btn" href="https://cassioporto44-tech.github.io/LanchoneteLocal/" target="_blank">
+Ver Projeto
+</a>
+
 </div>
 
 </div>
@@ -320,17 +345,25 @@ Tenho experiência em criação de sites, redes de computadores e instalação d
 
 <div class="contact">
 
-<a href="https://wa.me/5599999999999">WhatsApp</a>
+<a href="https://wa.me/5599984591017?text=Olá%20vi%20seu%20portfólio" target="_blank">
+WhatsApp
+</a>
 
-<a href="mailto:seuemail@email.com">Email</a>
+<a href="mailto:cassioporto44@gmail.com">
+Email
+</a>
 
-<a href="#">Instagram</a>
+<a href="https://instagram.com/porto.cassio" target="_blank">
+Instagram
+</a>
 
 </div>
 
 </div>
 
-<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
+<a class="whatsapp" href="https://wa.me/5599984591017" target="_blank">
+💬
+</a>
 
 <footer>
 
@@ -340,11 +373,32 @@ Tenho experiência em criação de sites, redes de computadores e instalação d
 
 <script>
 
-function tema(){
+/* modo tema */
 
+function tema(){
 document.body.classList.toggle("light")
+}
+
+/* efeito digitação */
+
+const texto = "Desenvolvedor Web • Programador • Redes de Computadores";
+let i = 0;
+
+function escrever(){
+
+if(i < texto.length){
+
+document.getElementById("texto").innerHTML += texto.charAt(i);
+
+i++;
+
+setTimeout(escrever,70);
 
 }
+
+}
+
+escrever();
 
 </script>
 
