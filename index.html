@@ -1,342 +1,352 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<title>Cássio Porto | Portfólio</title>
 
-    <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/output.css">
+<style>
 
-    <title>Dev Burguer - Sales</title>
-    </head>
-    <body>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    <!--HEADER--> 
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
-    <div class="w-full h-full flex flex-col justify-center items-center">
-    <img 
-    src="./assets/logo.png" 
-    alt="Dev Burguer - Sales"
-    class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-    >
-    <h1 class="text-4xl mb-2 font-bold text-white">Dev Burguer - Sales      
-    </h1>
+body{
+background:#0f172a;
+color:white;
+transition:0.3s;
+}
 
-    <span class="text-white font-medium">Tabaroa, Paraibano, MA</span>
+/* modo claro */
 
-    <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-        <span>
-            Seg á Dom - 07:00 ás 22:00
-        </span>
-    </div>
+.light{
+background:#f1f5f9;
+color:#111;
+}
 
-    </div>
-    </header>
-    <!--HEADER-->  
+/* menu */
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-    Conheça nosso menu
-    </h2>
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#020617;
+position:sticky;
+top:0;
+}
 
-    <!--INICIO MENU-->
-    <div id="menu">
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
 
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md-gap-12 mx-auto max-w-7xl px-2 mb-16">
+nav a{
+color:white;
+text-decoration:none;
+}
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-1.jpeg"
-            alt="Hamburguer Smach"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Smach</p>
-            <p class="text-sm">Pão levinho de fermentação natural da Trigou, Burguer
-                160, queijo prato e maionese de casa.</p>
+/* hero */
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$18.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Smach"
-                        data-price="18.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+.hero{
+text-align:center;
+padding:80px 20px;
+}
 
+.hero img{
+width:150px;
+border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
+}
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-7.jpeg"
-            alt="Hamburguer Duplo"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Duplo</p>
-            <p class="text-sm">Hambúrguer Duplo: dois suculentos hambúrgueres artesanais, queijo derretido e ingredientes frescos, perfeitos para saciar qualquer fome!.</p>
+.hero h1{
+font-size:38px;
+}
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$22.60</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Duplo"
-                        data-price="18.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+.hero span{
+color:#38bdf8;
+}
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-3.jpeg"
-            alt="Hamburguer Salad"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Salad</p>
-            <p class="text-sm">Hambúrguer Salad: um hambúrguer suculento combinado com alface crocante, tomate fresco e queijo suave, tudo em um pão macio.</p>
+.hero p{
+color:#94a3b8;
+}
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$15.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Salad"
-                        data-price="15.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#38bdf8;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:500;
+}
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-6.jpeg"
-            alt="Hamburguer Explosão"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Explosão</p>
-            <p class="text-sm">Hambúrguer Explosão: uma combinação irresistível de carne suculenta, bacon crocante, queijo derretido e molho picante que vai detonar seu paladar!</p>
+/* container */
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$45.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Explosão"
-                        data-price="45.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-5.jpeg"
-            alt="Hamburguer conjunto"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Conjunto</p>
-            <p class="text-sm">Hamburguer Conjunto - Um suculento hambúrguer acompanhado de batatas fritas crocantes e ketchup. Perfeito para matar a fome!</p>
+.section-title{
+font-size:28px;
+margin-bottom:20px;
+border-left:4px solid #38bdf8;
+padding-left:10px;
+}
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$32.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Conjunto"
-                        data-price="32.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+/* cards */
 
-    <!---PRODUTO ITEM-->
-    <div class="flex gap-2">
-        <img 
-            src="assets/hamb-4.jpeg"
-            alt="Hamburguer Duplo Queijo"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer Duplo Queijo</p>
-            <p class="text-sm">Hamburguer Duplo Queijo - Dois generosos hambúrgueres com uma camada extra de queijo derretido. Uma explosão de sabor em cada mordida!</p>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$26.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer Duplo Queijo"
-                        data-price="26.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
 
-     <!---PRODUTO ITEM-->
-     <div class="flex gap-2">
-        <img 
-            src="assets/hamb-2.jpeg"
-            alt="Hamburguer single"
-            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-        >
-        <div>                    
-            <p class="font-bold">Hamburguer single</p>
-            <p class="text-sm">Hamburguer Single - Um hambúrguer clássico, saboroso e suculento, perfeito para uma refeição rápida e deliciosa.</p>
+.card:hover{
+transform:translateY(-5px);
+}
 
-                <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$11.90</p>
-                    <button
-                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                        data-name="Hamburguer single"
-                        data-price="11.90"
-                        >
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
-                </div>
-        </div>
-    </div>
-    <!---FIM PRODUTO ITEM-->
+/* habilidades */
 
+.skill{
+margin-bottom:15px;
+}
 
-    </main>
+.bar{
+background:#1e293b;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
 
-    <div class="max-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">
-            Bebidas
-        </h2>
-    </div>
+.bar span{
+display:block;
+height:10px;
+background:#38bdf8;
+}
 
-    <!--GRID BEBIDAS-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md-gap-12 mx-auto max-w-7xl px-2 mb-16" id="menu">
+/* projetos */
 
-        <!---BEBIDA ITEM-->
-<div class="flex gap-2 w-full">
-    <img 
-        src="assets/coca.jpeg"
-        alt="Coca lata"
-        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-    >
-    <div class="w-full">                    
-        <p class="font-bold">Coca lata</p>
+.project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
 
-            <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$6</p>
-                <button
-                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                    data-name="Coca lata"
-                    data-price="6"
-                    >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-            </div>
-    </div>
+/* contato */
+
+.contact a{
+display:block;
+margin-bottom:10px;
+text-decoration:none;
+background:#38bdf8;
+color:black;
+padding:12px;
+border-radius:8px;
+text-align:center;
+}
+
+/* whatsapp flutuante */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+font-size:20px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+/* botão tema */
+
+.theme{
+cursor:pointer;
+background:#38bdf8;
+padding:8px 12px;
+border-radius:6px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+border-top:1px solid #334155;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Cássio Porto</h2>
+
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#profissoes">Profissões</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+<div class="theme" onclick="tema()">🌙</div>
+
+</nav>
+
+<section class="hero">
+
+<img src="https://i.imgur.com/2DhmtJ4.png">
+
+<h1>Olá, eu sou <span>Cássio Porto</span></h1>
+
+<p>Profissional de Tecnologia e Desenvolvimento Web</p>
+
+<a class="btn" href="#contato">Falar comigo</a>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title" id="sobre">Sobre Mim</h2>
+
+<p>
+Formado em Tecnologia de Redes de Computadores, atuo nas áreas de desenvolvimento web, programação e serviços técnicos.
+Tenho experiência em criação de sites, redes de computadores e instalação de equipamentos eletrônicos.
+</p>
+
+<br><br>
+
+<h2 class="section-title" id="profissoes">Minhas Profissões</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Programador</h3>
+<p>Desenvolvimento de sistemas e aplicações web.</p>
 </div>
-<!---FIM BEBIDA ITEM-->
 
-<!---BEBIDA ITEM-->
-<div class="flex gap-2 w-full">
-    <img 
-        src="assets/guarana.jpeg"
-        alt="Guaraná lata"
-        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
-    >
-    <div class="w-full">                    
-        <p class="font-bold">Guaraná lata</p>
-
-            <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$6</p>
-                <button
-                    class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                    data-name="Guaraná lata"
-                    data-price="6"
-                    >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-            </div>
-    </div>
+<div class="card">
+<h3>Desenvolvedor Web</h3>
+<p>Criação e desenvolvimento de sites profissionais.</p>
 </div>
-<!---FIM BEBIDA ITEM-->
 
-    </div>
-    <!--FIM GRID BEBIDAS-->
+<div class="card">
+<h3>Redes de Computadores</h3>
+<p>Infraestrutura e suporte técnico em redes.</p>
+</div>
 
-    </div>
-    <!--FIM MENU-->
+<div class="card">
+<h3>Instalador de Câmeras</h3>
+<p>Instalação de sistemas de segurança.</p>
+</div>
 
-    <!--MODAL CART-->
-    <div
-    class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
-    id="cart-modal"
-    >
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            
-            <h2 class="text-center font-bold text-2xl mb-2" > Meu Carrinho </h2>
-            
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+<div class="card">
+<h3>Instalação de TV</h3>
+<p>Instalação e configuração de equipamentos.</p>
+</div>
 
-            <p class="font-bold">Total:  <span id="cart-total">0.00</span></p>
+<div class="card">
+<h3>Gestor de Operações Esportivas</h3>
+<p>Organização e gestão esportiva.</p>
+</div>
 
-            <p class="font-bold mt-4">Endereço de Entrega</p>
-            <input type="text"
-            placeholder="Digite seu endereço completo..."
-            id="address"
-            class="w-full border-2 p-1 rounded my-1"
-            >
-        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo</p>
+</div>
 
-            <div class="flex items-center justify-between mt-5">
-                <button id="close-modal-btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
-            </div>
-        </div>
+<br><br>
 
-    </div>
-    <!--FIM MODAL CART-->
+<h2 class="section-title">Habilidades</h2>
 
+<div class="skill">HTML
+<div class="bar"><span style="width:90%"></span></div>
+</div>
 
-    <!--BUTTON CART FOOTHER-->
-    <footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 flex items-center justify-center">
-        <button 
-        class="flex items-center gap-2 text-white font-bold"
-        id="cart-btn"
-        >
-            (<span id="cart-count"></span>)
-            Veja meu carrinho
-            <i class="fa fa-cart-plus text-lg text-white"></i>
-        </button>
-    </footer>
-    <!--FIM BUTTON CART FOOTHER-->
+<div class="skill">CSS
+<div class="bar"><span style="width:85%"></span></div>
+</div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="script.js"></script>
-    </body>
-    </html>
+<div class="skill">JavaScript
+<div class="bar"><span style="width:75%"></span></div>
+</div>
+
+<div class="skill">Redes
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+<br><br>
+
+<h2 class="section-title" id="projetos">Projetos</h2>
+
+<div class="grid">
+
+<div class="project">
+<h3>Site de Lanchonete</h3>
+<p>Site profissional com cardápio digital e pedidos pelo WhatsApp.</p>
+<a class="btn" href="https://cassioporto44-tech.github.io/LanchoneteLocal/">Ver Projeto</a>
+</div>
+
+<div class="project">
+<h3>Portfólio Profissional</h3>
+<p>Site de apresentação profissional.</p>
+</div>
+
+</div>
+
+<br><br>
+
+<h2 class="section-title" id="contato">Contato</h2>
+
+<div class="contact">
+
+<a href="https://wa.me/5599999999999">WhatsApp</a>
+
+<a href="mailto:seuemail@email.com">Email</a>
+
+<a href="#">Instagram</a>
+
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
+
+<footer>
+
+© 2026 - Cássio Porto
+
+</footer>
+
+<script>
+
+function tema(){
+
+document.body.classList.toggle("light")
+
+}
+
+</script>
+
+</body>
+</html>
